@@ -2,7 +2,9 @@ from shared import ModuleStore
 
 MODULES = [
     "pkgs_pacman",
-    "copy"    
+    "copy",
+    "paru",
+    "pkgs_aur"
 ]
 
 def main():

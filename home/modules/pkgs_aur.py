@@ -1,13 +1,9 @@
 import os 
 PKGS = [
-    "hyprland",
-    "git",
-    "neovim",
-    "kitty",
-    "nemo",
-    "waybar",
-    "rofi",
+    "vscodium-bin",
+    "zen-browser-bin",
 
+    
 
 ]
 
@@ -18,4 +14,4 @@ def main():
         #Create the string separated by a space
         pkg_string += pkg + " "
     
-    os.system(f"sudo pacman -Sy {pkg_string}")
+    os.system(f"paru -S {pkg_string} --skipreview")
