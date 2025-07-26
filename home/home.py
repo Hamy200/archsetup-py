@@ -1,6 +1,9 @@
 from shared import ModuleStore
 
-MODULES = ["pkgs_pacman"]
+MODULES = [
+    "pkgs_pacman",
+    "copy"    
+]
 
 def main():
     mod_store = ModuleStore("home.modules", MODULES)

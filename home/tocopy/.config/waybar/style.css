@@ -1,0 +1,169 @@
+@define-color main-bg rgba(50, 48, 47, 0.93);
+@define-color main-fg rgba(235,219,178, 1);
+@define-color yellow rgba(215,153,33, 0.9);
+@define-color black-text rgba(0,0,0,0.7);
+@define-color button-hover rgba(75,75,125,0.6);
+@define-color cyan rgba(104,157,106, 0.6);
+@define-color blue rgba(69,133,136, 0.6);
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 25px;
+    color: @main-fg;
+  }
+
+#waybar {
+    background: @main-bg;
+    border-radius: 3px;
+}
+
+
+
+#window {
+    border-radius: 7px;
+}
+
+tooltip {
+    background: @main-bg;
+    color: @main-fg;
+    border-radius: 7px;
+    border-width: 0px;
+}
+
+#workspaces,
+#taskbar {
+    padding: 0px;
+    background: @blue;
+    border-radius: 7px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 7px;
+    margin-left: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 0px;
+    color: @main-fg;
+}
+
+#workspaces button.active {
+    background: @yellow;
+    color: @black-text;
+
+}
+
+#workspaces button:hover {
+    background: @button-hover;
+}
+
+#taskbar button {
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 7px;
+    margin-left: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 0px;
+    animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+    background: @yellow;
+    color: @black-text;
+}
+
+#taskbar button:hover {
+    background: @button-hover;
+}
+
+#tray menu * {
+    min-height: 16px;
+}
+
+#tray menu separator {
+    min-height: 10px
+}
+
+
+/* #tray,
+#workspaces,
+#taskbar,
+#cpu,
+#custom-cpuinfo,
+#memory,
+#custom-gpuinfo,
+#clock,
+#idle_inhibitor,
+#custom-battery,
+#custom-brightness,
+#custom-volume,
+#custom-microphone,
+#language,
+#custom-system-update,
+#custom-do-not-disturb,
+#custom-vpn,
+#custom-bluetooth,
+#custom-networkmanager,
+#custom-power,
+#custom-l_end,
+#custom-r_end 
+{
+    color: @main-fg;
+    background: @main-bg;
+    opacity: 1;
+    margin: 4px 0px 4px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+} 
+
+
+#custom-r_end {
+    border-radius: 0px 21px 21px 0px;
+    margin-right: 9px;
+    padding-right: 3px;
+} 
+
+#custom-l_end {
+    border-radius: 21px 0px 0px 21px;
+    margin-left: 19px;
+    padding-left: 3px;
+    background: @main-bg;
+} */
+
+
+
+
+#custom-power {
+  background-image: url('/home/hc/.config/waybar/NixOS.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 7px;
+}
+
+#tray {
+  margin-right: 20px;
+}
+
+.module-left {
+  background: @wb-hvr-bg;
+}
+
+.modules-right{
+  margin-right: 15px;
+}
+
+#pulseaudio {
+  margin-right: 15px;
+}

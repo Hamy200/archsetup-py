@@ -2,6 +2,8 @@ from pathlib import Path
 import importlib
 
 BASE_PATH = Path("./")
+HOME_TOCOPY = Path("./home/tocopy")
+HOME = Path("/home/hc")
 
 class ModuleStore:
     def __init__(self, modules_dir, child_modules):
