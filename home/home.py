@@ -4,8 +4,10 @@ MODULES = [
     "pkgs_pacman",
     "copy",
     "paru",
-    "pkgs_aur",
-    "zsh"
+    # "pkgs_aur",
+    # "zsh",
+    #"git",
+
 ]
 
 def main():

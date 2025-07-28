@@ -2,7 +2,8 @@ import os
 PKGS = [
     "vscodium-bin",
     "zen-browser-bin",
-    "anki-bin"
+    "anki-bin",
+    "mpvpaper"
 
     
 
@@ -11,6 +12,8 @@ PKGS = [
 
 def main():
     """Modules to install AUR packages using paru"""
+    print("#### AUR PKGS ####")
+
     pkg_string = ""
     for pkg in PKGS:
         #Create the string separated by a space

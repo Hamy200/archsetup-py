@@ -17,7 +17,8 @@ PKGS = [
     "zsh",
     "fzf",
     "zsh-autosuggestions",
-    "zsh-syntax-highlighting"
+    "zsh-syntax-highlighting",
+    "ntfs-3g",
 
 
 ]
@@ -25,6 +26,8 @@ PKGS = [
 
 def main():
     """Module to install pacman pkgs"""
+    print("#### PACMAN PKGS ####")
+
     pkg_string = ""
     for pkg in PKGS:
         #Create the string separated by a space

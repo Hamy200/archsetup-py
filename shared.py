@@ -5,6 +5,8 @@ BASE_PATH = Path("./")
 HOME_TOCOPY = Path("./home/tocopy")
 HOME = Path("/home/hc")
 
+GIT_EMAIL="104378548+Hamy200@users.noreply.github.com"
+
 class ModuleStore:
     def __init__(self, modules_dir, child_modules):
         self.modules_dir = modules_dir

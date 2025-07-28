@@ -1,6 +1,7 @@
 import os 
 def main():
     """Module to install ZSH, OhmyZSH and its plugins"""
+    print("#### ZSH ####")
     os.system(
         '''
         chsh -s /usr/bin/zsh &&

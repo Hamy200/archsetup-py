@@ -5,6 +5,8 @@ def main():
     """
     Module to install Paru
     """
+    print("#### PARU ####")
+
     os.system("""
     mkdir ~/build && 
     cd ~/build && 
