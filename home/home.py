@@ -1,9 +1,9 @@
 from shared import ModuleStore
 
 MODULES = [
-    "pkgs_pacman",
+    #"pkgs_pacman",
     "copy",
-    "paru",
+    #"paru",
     # "pkgs_aur",
     # "zsh",
     #"git",
