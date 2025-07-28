@@ -4,10 +4,15 @@ MODULES = [
     "pkgs_pacman",
     "copy",
     "paru",
-    "pkgs_aur"
+    "pkgs_aur",
+    "zsh"
 ]
 
 def main():
+    """
+    The base home module to execute submodules
+    Allows for easily removing and adding modules when wanted
+    """
     mod_store = ModuleStore("home.modules", MODULES)
 
     for mod in mod_store.modules:
