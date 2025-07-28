@@ -3,8 +3,8 @@ import importlib
 
 BASE_PATH = Path("./")
 HOME_TOCOPY = Path("./home/tocopy")
+HOME_NOTCOPY = Path("./home/notcopy")
 HOME = Path("/home/hc")
-
 GIT_EMAIL="104378548+Hamy200@users.noreply.github.com"
 
 class ModuleStore:
