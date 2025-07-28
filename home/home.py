@@ -7,6 +7,7 @@ MODULES = [
     # "pkgs_aur",
     # "zsh",
     #"git",
+    "gtk",
 
 ]
 
