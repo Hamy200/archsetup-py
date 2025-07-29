@@ -20,6 +20,7 @@
 		"hyprland/window"
 	],
 	"modules-right": [
+		"custom/prayer",
 		"pulseaudio",
 		"tray",
 		"custom/idle_inhibitor",
@@ -142,6 +143,15 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+
+    "custom/prayer": {
+	"exec": "python $HOME/.config/Scripts/prayer.py",
+	"format": " {text} | ",
+	"return-type": "json",
+	"interval": 1800, //execute every 30 mins
+	"tooltip": true,
+	"tooltip-format": "{alt}"
     },
 
 	
