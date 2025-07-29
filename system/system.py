@@ -1,6 +1,10 @@
 from shared import ModuleStore
 
-MODULES = ["boot"]
+MODULES = [
+    "boot",
+    #"automount"
+
+    ]
 
 def main():
     """

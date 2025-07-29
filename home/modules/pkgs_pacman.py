@@ -19,7 +19,8 @@ PKGS = [
     "zsh-autosuggestions",
     "zsh-syntax-highlighting",
     "ntfs-3g",
-    "python-requests" #for the prayer time waybar module
+    "python-requests", #for the prayer time waybar module
+    "yazi"
 
 
 ]

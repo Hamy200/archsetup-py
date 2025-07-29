@@ -7,25 +7,27 @@ API_URL = "https://api.aladhan.com/v1/calendar/2025/7?latitude=51.656490&longitu
 
 
 def main():
-    today = datetime.date.today()
-    day = today.day if today.day >= 10 else "0" + str(today.day)
-    month = today.month if today.month >= 10 else "0" + str(today.month)
-    today_formatted = f"{day}-{month}-{today.year}"
-    # print(today_formatted)
-    res = requests.get(API_URL).json()["data"]
-    
-    for entry in res:
-        if entry["date"]["gregorian"]["date"] == today_formatted:
-            timings = {
-                "Fajr": entry["timings"]["Fajr"].split(" ")[0],
-                "Sunrise": entry["timings"]["Sunrise"].split(" ")[0],
-                "Dhuhr": entry["timings"]["Dhuhr"].split(" ")[0],
-                "Asr": entry["timings"]["Asr"].split(" ")[0],
-                "Maghrib": entry["timings"]["Maghrib"].split(" ")[0],
-                "Isha": entry["timings"]["Isha"].split(" ")[0]
-            }
-            print(json.dumps({"text": calc_closest_time(timings), "class": "prayer", "alt": generate_table(timings)}))
-
+    try:
+        today = datetime.date.today()
+        day = today.day if today.day >= 10 else "0" + str(today.day)
+        month = today.month if today.month >= 10 else "0" + str(today.month)
+        today_formatted = f"{day}-{month}-{today.year}"
+        # print(today_formatted)
+        res = requests.get(API_URL).json()["data"]
+        
+        for entry in res:
+            if entry["date"]["gregorian"]["date"] == today_formatted:
+                timings = {
+                    "Fajr": entry["timings"]["Fajr"].split(" ")[0],
+                    "Sunrise": entry["timings"]["Sunrise"].split(" ")[0],
+                    "Dhuhr": entry["timings"]["Dhuhr"].split(" ")[0],
+                    "Asr": entry["timings"]["Asr"].split(" ")[0],
+                    "Maghrib": entry["timings"]["Maghrib"].split(" ")[0],
+                    "Isha": entry["timings"]["Isha"].split(" ")[0]
+                }
+                print(json.dumps({"text": calc_closest_time(timings), "class": "prayer", "alt": generate_table(timings)}))
+    except:
+        print(json.dumps({"text": "Prayer Script Failed!"}))
 
 def calc_closest_time(timings):
     """Returns a string of text in the format 'PrayerName: Time'"""
