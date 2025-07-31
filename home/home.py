@@ -9,7 +9,7 @@ MODULES = [
     # "zsh",
     #"git",
     # "gtk",
-    "browser",
+    # "browser",
 
 ]
 

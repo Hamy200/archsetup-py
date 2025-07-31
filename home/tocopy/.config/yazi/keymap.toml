@@ -1,0 +1,5 @@
+[mgr]
+prepend_keymap = [
+  {on="<S-M>", run="plugin mount"},
+  {on="!", run=["shell --orphan kitty"]}
+]

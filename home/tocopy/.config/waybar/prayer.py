@@ -26,8 +26,8 @@ def main():
                     "Isha": entry["timings"]["Isha"].split(" ")[0]
                 }
                 print(json.dumps({"text": calc_closest_time(timings), "class": "prayer", "alt": generate_table(timings)}))
-    except:
-        print(json.dumps({"text": "Prayer Script Failed!"}))
+    except Exception as e:
+        print(json.dumps({"text": f"Prayer Script Failed! {e}"}))
 
 def calc_closest_time(timings):
     """Returns a string of text in the format 'PrayerName: Time'"""

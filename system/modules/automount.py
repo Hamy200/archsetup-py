@@ -7,9 +7,10 @@ def main():
     os.system(""" 
     sudo su -c "echo 'LABEL=Hamza\040HDD  /media/Hamza\040HDD  ntfs  defaults,nofail  0  2' >> /etc/fstab"  &&
     findmnt --verify --verbose &&
-    sudo systemctl daemon-reload
-    
+    sudo systemctl daemon-reload"
     """)
+    
+        
 
 
 
