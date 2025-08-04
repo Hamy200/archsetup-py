@@ -2,7 +2,7 @@ import requests
 import datetime
 import json
 
-API_URL = "https://api.aladhan.com/v1/calendar/2025/7?latitude=51.656490&longitude=-0.39032&method=15&shafaq=general&tune=5%2C3%2C5%2C7%2C9%2C-1%2C0%2C8%2C-6&school=0&midnightMode=0&timezonestring=Europe%2FBelfast&latitudeAdjustmentMethod=3&calendarMethod=UAQ"
+#The month needs to be updated
 
 
 
@@ -11,10 +11,10 @@ def main():
         today = datetime.date.today()
         day = today.day if today.day >= 10 else "0" + str(today.day)
         month = today.month if today.month >= 10 else "0" + str(today.month)
+        API_URL = f"https://api.aladhan.com/v1/calendar/2025/{month}?latitude=51.656490&longitude=-0.39032&method=15&shafaq=general&tune=5%2C3%2C5%2C7%2C9%2C-1%2C0%2C8%2C-6&school=0&midnightMode=0&timezonestring=Europe%2FBelfast&latitudeAdjustmentMethod=3&calendarMethod=UAQ"
         today_formatted = f"{day}-{month}-{today.year}"
         # print(today_formatted)
         res = requests.get(API_URL).json()["data"]
-        
         for entry in res:
             if entry["date"]["gregorian"]["date"] == today_formatted:
                 timings = {

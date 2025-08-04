@@ -3,7 +3,8 @@ PKGS = [
     "vscodium-bin",
     "zen-browser-bin",
     "anki-bin",
-    "mpvpaper"
+    "mpvpaper",
+    "logseq-bin"
 
     
 

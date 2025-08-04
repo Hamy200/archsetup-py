@@ -3,6 +3,7 @@ from shared import ModuleStore
 MODULES = [
     "boot",
     #"automount"
+    "copy"
 
     ]
 
